@@ -2,11 +2,11 @@
     ldi R16, 0xFF
 	ldi R17, 0xFF
 ; set DDRB as output
-	out DDRB, R17
+	out DDRA, R17
 ; code to toggle LEDs
 toggler:
 	subi R16, 0xFF
-	out PORTB, R16
+	out PORTA, R16
 	rjmp idle_loop
 ; delay loop
 idle_loop :
